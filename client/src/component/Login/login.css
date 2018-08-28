@@ -1,0 +1,21 @@
+.login {
+  width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #dadada;
+  background: #eee;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  text-indent: 10px;
+  font-size: 18px;
+}

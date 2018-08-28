@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="username" placeholder="用户名">
+  <input type="text" id="userpass" placeholder="密码">
+  <button type="button" id="login">登陆</button>
+
+  <script src="https://lib.baomitu.com/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    $('#login').on('click',function() {
+      var user = {
+        name:$('#username').val(),
+        pass:$('#userpass').val()
+      };
+
+      $.ajax({
+        type: "POST",
+        data:user,
+        url: "http://127.0.0.1:3030/login",
+      })
+      .done(function(res) {
+        console.log(res);
+      })
+      .fail(function(err) {
+        console.log(err);
+      })
+    })
+  </script>
+</body>
+</html>
